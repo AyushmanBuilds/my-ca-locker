@@ -229,6 +229,30 @@
     .final-band{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:34px;border-radius:27px;background:linear-gradient(135deg,#0a2359,#164aa9);color:#fff;box-shadow:0 28px 62px rgba(8,29,73,.2);overflow:hidden;position:relative}.final-band::before{content:"";position:absolute;width:340px;height:340px;right:-90px;top:-170px;border-radius:50%;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 72px rgba(255,255,255,.02)}.final-band h2{font:800 clamp(1.7rem,3vw,2.7rem)/1.08 Manrope;letter-spacing:-.04em;position:relative}.final-band p{color:#cad6ec;margin-top:5px;font-size:.86rem;position:relative}.final-band .btn{background:#fff;color:var(--blue);position:relative}
     footer{padding:70px 0 24px;background:#071733;color:#bac6da}.footer-grid{display:grid;grid-template-columns:1.7fr .7fr .7fr .7fr;gap:40px}.footer-brand .brand{color:#fff}.footer-brand .brand img{width:48px;height:48px}.footer-brand p{max-width:360px;font-size:.78rem;margin-top:14px;color:#9eacc2}.footer-col h4{color:#fff;font:800 .78rem Manrope;margin-bottom:13px}.footer-col{display:grid;align-content:start;gap:8px}.footer-col a{font-size:.75rem;color:#aab7ca}.footer-col a:hover{color:#fff}.copyright{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:20px;font-size:.62rem;color:#8592a8}
 
+
+    /* floating actions */
+    .floating-actions{position:fixed;right:24px;bottom:24px;z-index:1200;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+    .guest-fab{display:flex;align-items:center;gap:11px;padding:11px 15px 11px 12px;border:1px solid rgba(255,255,255,.4);border-radius:18px;color:#fff;background:linear-gradient(135deg,#0b2e7a 0%,#2b63c9 52%,#9c761f 100%);box-shadow:0 18px 42px rgba(11,46,122,.24);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;backdrop-filter:blur(14px)}
+    .guest-fab:hover{transform:translateY(-4px);box-shadow:0 24px 52px rgba(11,46,122,.32);filter:saturate(1.08)}
+    .guest-fab:active{transform:translateY(-1px) scale(.98)}
+    .guest-fab .fab-icon{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);font-size:1rem}
+    .guest-fab .fab-copy{display:flex;flex-direction:column;align-items:flex-start;line-height:1.08}
+    .guest-fab strong{font:800 .78rem Manrope,sans-serif;letter-spacing:.01em}
+    .guest-fab span{font-size:.64rem;color:rgba(255,255,255,.88);margin-top:3px}
+    .whatsapp-fab{width:54px;height:54px;border:0;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:1.5rem;box-shadow:0 16px 36px rgba(37,211,102,.28);transition:transform .25s ease,box-shadow .25s ease}
+    .whatsapp-fab:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 22px 42px rgba(37,211,102,.36)}
+    .whatsapp-fab:active{transform:scale(.96)}
+    .form-note strong{color:var(--ink)}
+    html[data-theme="dark"] .whatsapp-fab{box-shadow:0 16px 36px rgba(37,211,102,.18)}
+    html[data-theme="dark"] .guest-fab{box-shadow:0 18px 42px rgba(0,0,0,.42)}
+    @media (max-width:720px){
+      .floating-actions{right:14px;bottom:14px;gap:9px}
+      .guest-fab{border-radius:16px;padding:10px 12px 10px 10px}
+      .guest-fab .fab-icon{width:34px;height:34px;border-radius:11px}
+      .guest-fab strong{font-size:.72rem}.guest-fab span{font-size:.58rem}
+      .whatsapp-fab{width:50px;height:50px;font-size:1.35rem}
+    }
+
     /* responsive */
     @media (max-width:1080px){.hero-grid{grid-template-columns:1fr}.hero-copy{max-width:760px}.hero-visual{max-width:760px;width:100%;margin-inline:auto}.hero-bottom{grid-template-columns:repeat(2,1fr)}.nav-links{gap:17px}.feature{gap:36px}.ai-grid{grid-template-columns:1fr}.ai-orb{margin:0 auto}.ai-wrap{padding:38px}.security-layout{grid-template-columns:1fr}.footer-grid{grid-template-columns:1.4fr .8fr .8fr .8fr}}
     @media (max-width:900px){.section{padding:90px 0}.nav-links,.nav-actions .btn{display:none}.mobile-toggle{display:grid;place-items:center}.nav-shell{height:66px}.pain-grid,.portal-grid,.testimonial-grid,.pricing-grid{grid-template-columns:1fr}.portal-card,.pain,.quote,.price-card{max-width:650px;width:100%;margin-inline:auto}.price-card.popular{transform:none}.feature{grid-template-columns:1fr;gap:28px}.feature:nth-child(even) .feature-copy,.feature:nth-child(even) .feature-visual{order:initial}.feature-visual{min-height:350px}.demo-shell{grid-template-columns:1fr}.final-band{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
@@ -541,6 +565,16 @@
     </div>
   </header>
 
+  <div class="floating-actions" aria-label="Quick actions">
+    <a class="guest-fab" id="guestModeFab" href="https://mycalocker.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Try CA Locker in Guest Mode">
+      <span class="fab-icon"><i class="bi bi-play-fill"></i></span>
+      <span class="fab-copy"><strong>Try in Guest Mode</strong><span>Start Managing them <i class="bi bi-arrow-right"></i></span></span>
+    </a>
+    <a class="whatsapp-fab" id="whatsappFab" href="https://wa.me/918018017529" target="_blank" rel="noopener noreferrer" aria-label="Chat with CA Locker on WhatsApp" title="Chat with CA Locker on WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+
   <main>
     <section class="hero" aria-labelledby="heroTitle">
       <div class="container">
@@ -624,7 +658,7 @@
     </section>
 
     <section class="section" id="demo">
-      <div class="container"><div class="section-head center reveal"><span class="eyebrow"><i class="bi bi-play-circle"></i> Try it yourself</span><h2>Explore the workflow before you commit.</h2><p>Request a walkthrough or open a sample workspace with fictional data. No complicated setup.</p></div><div class="demo-shell reveal scale"><div class="demo-copy"><span class="eyebrow">15-minute walkthrough</span><h3>See how a document moves from upload to client delivery — without the WhatsApp chase.</h3><p>We’ll show the admin workflow, staff handoff, client experience, reminders, links, and activity history.</p><div class="demo-pills"><span class="demo-pill">Admin portal</span><span class="demo-pill">Staff portal</span><span class="demo-pill">Client portal</span><span class="demo-pill">Filing reminders</span><span class="demo-pill">Audit trail</span></div><div style="margin-top:24px"><button class="btn btn-ghost" type="button" data-demo><i class="bi bi-box-arrow-up-right"></i> Open sample demo</button></div></div><form class="demo-form" id="demoForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="e.g. Ayushman Acharya"></div><div class="field"><label for="email">Work email</label><input id="email" type="email" required placeholder="you@firm.com"></div><div class="field"><label for="firm">Firm name</label><input id="firm" required placeholder="Your firm name"></div><div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91 98xxxxxxx"></div><button class="btn btn-primary" style="width:100%" type="submit">Book my demo <i class="bi bi-arrow-right"></i></button><div class="form-status" id="formStatus">Thanks — your demo request has been captured locally for this prototype.</div><div class="form-note">Prototype note: connect this form to your CRM, email inbox, or automation webhook before launch.</div></form></div></div>
+      <div class="container"><div class="section-head center reveal"><span class="eyebrow"><i class="bi bi-play-circle"></i> Try it yourself</span><h2>Explore the workflow before you commit.</h2><p>Request a walkthrough or open a sample workspace with fictional data. No complicated setup.</p></div><div class="demo-shell reveal scale"><div class="demo-copy"><span class="eyebrow">15-minute walkthrough</span><h3>See how a document moves from upload to client delivery — without the WhatsApp chase.</h3><p>We’ll show the admin workflow, staff handoff, client experience, reminders, links, and activity history.</p><div class="demo-pills"><span class="demo-pill">Admin portal</span><span class="demo-pill">Staff portal</span><span class="demo-pill">Client portal</span><span class="demo-pill">Filing reminders</span><span class="demo-pill">Audit trail</span></div><div style="margin-top:24px"><a class="btn btn-ghost" href="https://mycalocker.netlify.app/" target="_blank" rel="noopener noreferrer" data-demo><i class="bi bi-box-arrow-up-right"></i> Open sample demo</a></div></div><form class="demo-form" id="demoForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="e.g. Ayushman Acharya"></div><div class="field"><label for="email">Work email</label><input id="email" type="email" required placeholder="you@firm.com"></div><div class="field"><label for="firm">Firm name</label><input id="firm" required placeholder="Your firm name"></div><div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91 98xxxxxxx"></div><button class="btn btn-primary" style="width:100%" type="submit">Book my demo <i class="bi bi-arrow-right"></i></button><div class="form-status" id="formStatus">Thanks — your demo request has been captured locally for this prototype.</div><div class="form-note"><strong>WhatsApp delivery:</strong> submitting opens a pre-filled WhatsApp message to +91 80180 17529.</div></form></div></div>
     </section>
 
     <section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] CA Locker helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
@@ -715,17 +749,52 @@
     // FAQ
     document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.faq-item').classList.toggle('open')));
 
-    // Demo form
+    // WhatsApp-powered demo form
     const demoForm = document.getElementById('demoForm');
     const formStatus = document.getElementById('formStatus');
-    demoForm.addEventListener('submit', e => { e.preventDefault(); formStatus.style.display='block'; demoForm.querySelector('button[type="submit"]').innerHTML='<i class="bi bi-check2"></i> Demo request saved'; });
+    const whatsappNumber = '918018017529';
+    const guestModeUrl = 'https://mycalocker.netlify.app/';
 
-    // Demo button interaction
-    document.querySelectorAll('[data-demo]').forEach(btn=>btn.addEventListener('click',()=>{
-      const target = document.getElementById('demoForm');
-      target.scrollIntoView({behavior:'smooth',block:'center'});
-      setTimeout(()=>document.getElementById('name').focus(),550);
+    function openWhatsApp(message){
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      const popup = window.open(url, '_blank', 'noopener,noreferrer');
+      if(!popup) window.location.href = url;
+      return url;
+    }
+
+    demoForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const firm = document.getElementById('firm').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = [
+        'CA Locker — New Demo Request',
+        '',
+        `Name: ${name}`,
+        `Work email: ${email}`,
+        `Firm name: ${firm}`,
+        `Phone: ${phone}`,
+        '',
+        `Guest demo: ${guestModeUrl}`
+      ].join('\\n');
+
+      formStatus.style.display='block';
+      formStatus.textContent='Opening WhatsApp with your demo request…';
+      demoForm.querySelector('button[type="submit"]').innerHTML='<i class="bi bi-whatsapp"></i> Open WhatsApp';
+      openWhatsApp(message);
+    });
+
+    // Make every "Open sample demo" trigger open the real guest workspace.
+    document.querySelectorAll('[data-demo]').forEach(btn=>btn.addEventListener('click', e=>{
+      e.preventDefault();
+      window.open(guestModeUrl, '_blank', 'noopener,noreferrer');
     }));
+
+    // Floating WhatsApp button
+    document.getElementById('whatsappFab').addEventListener('click', () => {
+      openWhatsApp('Hello, I would like to know more about CA Locker.');
+    });
 
     // Subtle mouse parallax for desktop hero only
     const heroVisual = document.querySelector('.hero-visual');
