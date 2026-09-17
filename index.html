@@ -302,6 +302,31 @@
     html[data-theme="dark"] .price-card>p,html[data-theme="dark"] .price-features li{color:#9aa7c2}
     html[data-theme="dark"] .price span{color:#8b96aa}
 
+    /* talk to us / commercial section */
+    .talk-card{max-width:1080px;margin:0 auto;padding:34px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#fff,#f7faff);box-shadow:0 24px 70px rgba(31,53,94,.09)}
+    .talk-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+    .talk-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;background:#eaf1ff;color:var(--blue);font-size:.62rem;font-weight:800;letter-spacing:.03em}
+    .talk-card h3{margin:14px 0 7px;font:800 clamp(1.35rem,2.5vw,2rem) Manrope;color:var(--navy);letter-spacing:-.035em}
+    .talk-card-head p{max-width:700px;margin:0;color:#667287;font-size:.82rem;line-height:1.75}
+    .talk-icon{flex:0 0 58px;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#0a9f61,#19c77d);color:#fff;font-size:1.55rem;box-shadow:0 12px 25px rgba(10,159,97,.2)}
+    .talk-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 18px;padding:26px 0}
+    .talk-feature{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.7);font-size:.74rem;color:#58647a;line-height:1.55}
+    .talk-feature i{flex:0 0 auto;color:var(--green);font-size:.8rem;margin-top:2px}
+    .talk-feature b{color:var(--navy)}
+    .talk-card-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--line)}
+    .talk-note{display:flex;align-items:flex-start;gap:9px;color:#667287;font-size:.72rem;line-height:1.55;max-width:620px}.talk-note i{color:var(--blue);font-size:1rem;margin-top:1px}
+    .talk-whatsapp-btn{white-space:nowrap;min-width:180px}
+    html[data-theme="dark"] .talk-card{background:linear-gradient(145deg,#121a2e,#0d1628);box-shadow:0 24px 70px rgba(0,0,0,.42)}
+    html[data-theme="dark"] .talk-card-head{border-color:#273554}
+    html[data-theme="dark"] .talk-badge{background:rgba(110,168,255,.14);color:#a9c9ff}
+    html[data-theme="dark"] .talk-card h3{color:#f4f7ff}
+    html[data-theme="dark"] .talk-card-head p,html[data-theme="dark"] .talk-feature,html[data-theme="dark"] .talk-note{color:#9aa7c2}
+    html[data-theme="dark"] .talk-features{border-color:#273554}
+    html[data-theme="dark"] .talk-feature{background:rgba(255,255,255,.035);border-color:#273554}
+    html[data-theme="dark"] .talk-feature b{color:#edf2ff}
+    html[data-theme="dark"] .talk-card-foot{border-color:#273554}
+    @media(max-width:700px){.talk-card{padding:22px;border-radius:24px}.talk-card-head{gap:16px}.talk-icon{width:48px;height:48px;flex-basis:48px;border-radius:15px;font-size:1.2rem}.talk-features{grid-template-columns:1fr}.talk-card-foot{align-items:stretch;flex-direction:column}.talk-whatsapp-btn{width:100%}}
+
     /* faq */
     .faq{max-width:840px;margin-inline:auto;border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;padding:20px 0;display:flex;justify-content:space-between;align-items:center;background:transparent;border:0;text-align:left;color:var(--ink);font:800 .98rem Manrope}.faq-q i{transition:.28s ease;color:#7b879b}.faq-a{max-height:0;overflow:hidden;color:#6c788d;font-size:.88rem;transition:max-height .45s ease,padding .45s ease}.faq-item.open .faq-a{max-height:180px;padding:0 35px 18px 0}.faq-item.open .faq-q i{transform:rotate(45deg);color:var(--blue)}
     html[data-theme="dark"] .faq-q i{color:#8695b3}
@@ -916,7 +941,7 @@
           <span>CA Locker</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="#portals">Portals</a><a href="#features">Features</a><a href="#security">Security</a><a href="#demo">Demo</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+          <a href="#portals">Portals</a><a href="#features">Features</a><a href="#security">Security</a><a href="#demo">Demo</a><a href="#pricing">Talk to Us</a><a href="#faq">FAQ</a>
         </nav>
         <div class="nav-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill" id="themeIcon"></i></button><a class="btn btn-primary" href="#demo">Book a Demo <i class="bi bi-arrow-up-right"></i></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu"><i class="bi bi-list"></i></button></div>
       </div>
@@ -1023,14 +1048,50 @@
 
     <section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] CA Locker helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
 
-    <section class="section" id="pricing"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Simple commercial model</span><h2>Start with the workflow. <span class="gradient-text">Scale the workspace.</span></h2><p>Illustrative plans for the marketing site. Replace prices and limits with your final commercial model before launch.</p></div><div class="pricing-grid"><article class="price-card reveal" data-delay="1"><h3>Solo</h3><p>For independent practitioners building a cleaner client workflow.</p><div class="price">₹899<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Admin + client portal</li><li><i class="bi bi-check-circle-fill"></i> Client document vault</li><li><i class="bi bi-check-circle-fill"></i> Filing calendar</li><li><i class="bi bi-check-circle-fill"></i> Activity history</li></ul><a href="#demo" class="btn btn-ghost" style="width:100%">Book a Demo</a></article><article class="price-card popular reveal scale" data-delay="2"><span class="popular-badge">Most Popular</span><h3>Team</h3><p>For growing firms that need staff access and shared visibility.</p><div class="price">Custom<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Everything in Solo</li><li><i class="bi bi-check-circle-fill"></i> Staff portal + scoped access</li><li><i class="bi bi-check-circle-fill"></i> Tasks & client assignments</li><li><i class="bi bi-check-circle-fill"></i> Client messaging</li></ul><a href="#demo" class="btn btn-primary" style="width:100%">Talk to Us</a></article><article class="price-card reveal" data-delay="3"><h3>Firm</h3><p>For established practices with broader reporting and control needs.</p><div class="price">Custom<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Everything in Team</li><li><i class="bi bi-check-circle-fill"></i> Reports & insights</li><li><i class="bi bi-check-circle-fill"></i> AI assistant</li><li><i class="bi bi-check-circle-fill"></i> Onboarding support</li></ul><a href="#demo" class="btn btn-ghost" style="width:100%">Book a Demo</a></article></div></div></section>
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><i class="bi bi-chat-dots-fill"></i> Talk to us</span>
+          <h2>A complete CA workflow. <span class="gradient-text">One conversation to get started.</span></h2>
+          <p>Every firm works differently. Talk with us about your workflow, team size, client requirements, onboarding, and the right setup for your practice.</p>
+        </div>
+        <div class="talk-card reveal scale">
+          <div class="talk-card-head">
+            <div>
+              <span class="talk-badge"><i class="bi bi-stars"></i> CA Locker</span>
+              <h3>Everything your CA firm needs in one workspace.</h3>
+              <p>No fixed pricing displayed here. We’ll understand your firm first and discuss the setup directly with you.</p>
+            </div>
+            <div class="talk-icon"><i class="bi bi-whatsapp"></i></div>
+          </div>
+          <div class="talk-features">
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Admin Portal</b> — Clients, documents, tasks, reports, filing calendar, and firm-wide controls.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Staff Portal</b> — Scoped client access, assignments, uploads, task tracking, and workload visibility.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Client Portal</b> — Secure browser-first access, installable experience, document updates, and notifications.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Document Vault</b> — Organized client files, categories, secure storage, and easy document retrieval.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Filing & Reminders</b> — Filing calendar, due dates, priorities, and workflow reminders.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Secure Share Links</b> — Client-specific access paths with revocable links and controlled onboarding.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Audit Trail</b> — Searchable upload, download, view, share, and activity history.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Team & Tasks</b> — Client-specific staff assignments, due dates, priorities, and ownership tracking.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Client Messaging</b> — Direct messaging and broadcast updates alongside documents and deadlines.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Reports & Insights</b> — Storage, activity, client, staff, and operational reporting.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>AI Assistant</b> — Voice or text requests to find client records, documents, and workflow items.</span></div>
+            <div class="talk-feature"><i class="bi bi-check-circle-fill"></i><span><b>Security Controls</b> — Role-based access, server-side verification, encrypted storage, revocable links, and activity history.</span></div>
+          </div>
+          <div class="talk-card-foot">
+            <div class="talk-note"><i class="bi bi-shield-check"></i><span>Tell us about your firm and we’ll walk you through the relevant CA Locker workflow.</span></div>
+            <a class="btn btn-primary talk-whatsapp-btn" href="https://wa.me/918018017529?text=Hello%20CA%20Locker%2C%20I%27d%20like%20to%20talk%20about%20CA%20Locker%20for%20my%20firm." target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Talk With Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section-tight" id="faq"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Questions, answered</span><h2>Designed around the objections you’ll hear first.</h2></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">Do my clients need to download an app?<i class="bi bi-plus-lg"></i></button><div class="faq-a">No. The client experience can open from a secure link in a browser and can be installed like an app on supported devices.</div></div><div class="faq-item"><button class="faq-q">Is my data safe if I switch staff or employees?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Access is designed to be controlled by person and role, so permissions can be changed or revoked without handing around shared credentials.</div></div><div class="faq-item"><button class="faq-q">What if a client loses their phone?<i class="bi bi-plus-lg"></i></button><div class="faq-a">You can revoke the active client link and issue a new one, keeping the access path under your firm’s control.</div></div><div class="faq-item"><button class="faq-q">Can I create my own document categories?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. The product is positioned around configurable document categories, so you can match the workflow to your practice.</div></div><div class="faq-item"><button class="faq-q">Can I try the CA database and document locker before I buy?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. Use the demo request above or open the sample workspace to understand the workflow before committing.</div></div></div></div></section>
 
     <section class="section-tight" style="padding-top:0"><div class="container"><div class="final-band reveal scale"><div><h2>Stop chasing documents. Start running a system.</h2><p>See the workflow in a 15-minute walkthrough.</p></div><a href="#demo" class="btn">Book a Demo <i class="bi bi-arrow-right"></i></a></div></div></section>
   </main>
 
-  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="CA Locker logo" /><span>CA Locker</span></a><p>My CA Locker is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Pricing</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#top">About</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 CA Locker. All rights reserved.</span><span>Marketing prototype · Replace placeholder claims before launch.</span></div></div></footer>
+  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="CA Locker logo" /><span>CA Locker</span></a><p>My CA Locker is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Talk to Us</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#top">About</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 CA Locker. All rights reserved.</span><span>Marketing prototype · Replace placeholder claims before launch.</span></div></div></footer>
 
   <script>
     // Dark mode toggle — persisted in localStorage, falls back to system preference
@@ -1125,15 +1186,21 @@
       const firm = document.getElementById('firm').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const message = [
-        'CA Locker — New Demo Request',
+        '*🔐 CA LOCKER — DEMO REQUEST*',
+        '━━━━━━━━━━━━━━━━━━━━',
         '',
-        `Name: ${name}`,
-        `Work email: ${email}`,
-        `Firm name: ${firm}`,
-        `Phone: ${phone}`,
+        '*👤 Contact Details*',
+        `• *Name:* ${name}`,
+        `• *Work Email:* ${email}`,
+        `• *Firm:* ${firm}`,
+        `• *Phone:* ${phone}`,
         '',
-        `Guest demo: ${guestModeUrl}`
-      ].join('\\n');
+        '*🚀 Sample Demo*',
+        `🔗 ${guestModeUrl}`,
+        '',
+        '━━━━━━━━━━━━━━━━━━━━',
+        '📩 _Please contact me regarding the CA Locker demo._'
+      ].join('\n');
 
       formStatus.style.display='block';
       formStatus.textContent='Opening WhatsApp with your demo request…';
