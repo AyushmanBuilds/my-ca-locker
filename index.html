@@ -204,7 +204,42 @@
     .micro-proof span{display:inline-flex;align-items:center;gap:7px}.micro-proof i{color:var(--green)}
     .seo-intro{margin-top:16px;max-width:690px;color:#6a758a;font-size:.9rem;line-height:1.65}
     html[data-theme="dark"] .seo-intro{color:#a9b6cf}
-    .hero-visual{position:relative;min-height:600px;perspective:1600px}
+    .hero-visual{position:relative;min-height:640px;perspective:1600px}
+    /* Hero vault scene: subtle document network surrounding the product preview. */
+    .hero-vault-scene{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:visible}
+    .hero-vault-glow{position:absolute;left:50%;top:49%;width:520px;height:520px;transform:translate(-46%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(36,105,245,.20) 0%,rgba(34,211,238,.10) 34%,rgba(36,105,245,.045) 53%,transparent 72%);filter:blur(8px);animation:vaultPulse 7s ease-in-out infinite}
+    html[data-theme="dark"] .hero-vault-glow{background:radial-gradient(circle,rgba(50,123,255,.34) 0%,rgba(34,211,238,.15) 34%,rgba(50,123,255,.07) 56%,transparent 73%);filter:blur(11px)}
+    .hero-vault-grid{position:absolute;inset:8% 0 3%;width:100%;height:89%;opacity:.5;overflow:visible}
+    .hero-vault-grid .net-line{stroke:rgba(43,102,206,.18);stroke-width:1.2;stroke-dasharray:5 7;vector-effect:non-scaling-stroke}
+    .hero-vault-grid .net-line-glow{stroke:rgba(35,211,238,.11);stroke-width:4;filter:blur(3px);vector-effect:non-scaling-stroke}
+    html[data-theme="dark"] .hero-vault-grid .net-line{stroke:rgba(132,178,255,.24)}
+    html[data-theme="dark"] .hero-vault-grid .net-line-glow{stroke:rgba(58,211,255,.17)}
+    .hero-vault-grid .net-node{fill:#3b82f6;opacity:.82;filter:drop-shadow(0 0 7px rgba(59,130,246,.42))}
+    .hero-vault-grid .net-node.cyan{fill:#22d3ee;filter:drop-shadow(0 0 7px rgba(34,211,238,.38))}
+    html[data-theme="dark"] .hero-vault-grid .net-node{fill:#77aaff}
+    .hero-doc{position:absolute;display:flex;align-items:center;gap:9px;min-width:134px;padding:10px 12px;border:1px solid rgba(190,208,235,.72);border-radius:15px;background:rgba(255,255,255,.66);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 38px rgba(29,65,120,.10),0 0 0 1px rgba(255,255,255,.25) inset;color:#30415e;transform:translate3d(0,0,0);z-index:1}
+    .hero-doc i{width:30px;height:30px;flex:0 0 30px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#e8f1ff,#f5fbff);color:#2563eb;font-size:.9rem}
+    .hero-doc b{display:block;font:800 .66rem Manrope;letter-spacing:-.01em;line-height:1.15}
+    .hero-doc span{display:block;margin-top:2px;color:#78869d;font-size:.49rem;font-weight:700}
+    html[data-theme="dark"] .hero-doc{background:rgba(10,22,42,.66);border-color:rgba(133,171,232,.20);box-shadow:0 18px 44px rgba(0,0,0,.34),0 0 0 1px rgba(255,255,255,.035) inset;color:#e8f0ff}
+    html[data-theme="dark"] .hero-doc i{background:linear-gradient(135deg,rgba(53,112,255,.22),rgba(30,205,235,.10));color:#8ab6ff}
+    html[data-theme="dark"] .hero-doc span{color:#8ea3c2}
+    .hero-doc-1{left:-18px;top:78px;animation:docFloat1 6.8s ease-in-out infinite}
+    .hero-doc-2{right:-8px;top:138px;animation:docFloat2 7.6s ease-in-out infinite}
+    .hero-doc-3{left:12px;bottom:78px;animation:docFloat3 8.2s ease-in-out infinite}
+    .hero-doc-4{right:68px;bottom:24px;animation:docFloat4 7.2s ease-in-out infinite}
+    .hero-doc-2 i{color:#0f8a6b}.hero-doc-3 i{color:#d59a24}.hero-doc-4 i{color:#8b5cf6}
+    .hero-vault-tag{position:absolute;left:50%;top:9px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(158,188,232,.28);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 25px rgba(28,60,110,.08);color:#526883;font-size:.52rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;z-index:2}
+    .hero-vault-tag i{color:#2b78ea}
+    html[data-theme="dark"] .hero-vault-tag{background:rgba(9,20,39,.58);border-color:rgba(141,178,237,.15);box-shadow:0 12px 28px rgba(0,0,0,.28);color:#9bb0d0}
+    html[data-theme="dark"] .hero-vault-tag i{color:#7fb2ff}
+    @keyframes vaultPulse{0%,100%{transform:translate(-46%,-50%) scale(1);opacity:.88}50%{transform:translate(-46%,-50%) scale(1.05);opacity:1}}
+    @keyframes docFloat1{0%,100%{transform:translate3d(0,0,0) rotate(-1.5deg)}50%{transform:translate3d(8px,-12px,0) rotate(-.5deg)}}
+    @keyframes docFloat2{0%,100%{transform:translate3d(0,0,0) rotate(1.5deg)}50%{transform:translate3d(-7px,-10px,0) rotate(.5deg)}}
+    @keyframes docFloat3{0%,100%{transform:translate3d(0,0,0) rotate(1deg)}50%{transform:translate3d(9px,9px,0) rotate(1.8deg)}}
+    @keyframes docFloat4{0%,100%{transform:translate3d(0,0,0) rotate(-1deg)}50%{transform:translate3d(-7px,8px,0) rotate(-1.8deg)}}
+    .dashboard{z-index:3}
+    .phone-3d{z-index:4}.notification{z-index:5}
     .glass-card{position:absolute;inset:auto;border:1px solid rgba(210,220,239,.95);background:rgba(255,255,255,.82);backdrop-filter:blur(16px);box-shadow:var(--shadow);border-radius:26px}
     .dashboard{top:40px;left:0;width:92%;padding:10px;transform:rotateY(-7deg) rotateX(4deg) rotateZ(-1deg);animation:heroFloat 7s ease-in-out infinite}
     .browser-bar{height:35px;display:flex;align-items:center;gap:6px;padding:0 9px;color:#909caf;font-size:.63rem}
@@ -921,6 +956,106 @@
       .final-band{padding:21px}
     }
 
+
+
+    /* premium sales-focused ambient background */
+    :root{
+      --bg:#f7faff;
+      --bg-deep:#edf4ff;
+      --ambient-blue:rgba(37,99,235,.16);
+      --ambient-cyan:rgba(34,211,238,.10);
+      --ambient-gold:rgba(210,167,72,.08);
+      --grid-line:rgba(28,67,130,.055);
+    }
+    html[data-theme="dark"]{
+      --bg:#050b16;
+      --bg-deep:#091426;
+      --ambient-blue:rgba(61,126,255,.20);
+      --ambient-cyan:rgba(34,211,238,.085);
+      --ambient-gold:rgba(232,200,119,.07);
+      --grid-line:rgba(151,181,230,.045);
+    }
+    body{
+      background:
+        radial-gradient(circle at 78% 8%, var(--ambient-blue), transparent 26%),
+        radial-gradient(circle at 14% 34%, var(--ambient-cyan), transparent 22%),
+        linear-gradient(180deg,var(--bg) 0%,var(--white) 42%,var(--bg-deep) 100%);
+    }
+    .ambient-scene{
+      position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-3;
+      contain:strict;
+    }
+    .ambient-grid{
+      position:absolute;inset:-12%;
+      background-image:
+        linear-gradient(var(--grid-line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:58px 58px;
+      mask-image:radial-gradient(circle at 50% 15%,#000 0%,rgba(0,0,0,.92) 28%,transparent 78%);
+      -webkit-mask-image:radial-gradient(circle at 50% 15%,#000 0%,rgba(0,0,0,.92) 28%,transparent 78%);
+      opacity:.82;
+      transform:perspective(900px) rotateX(55deg) translateY(-18%);
+      transform-origin:top center;
+    }
+    .ambient-glow{
+      position:absolute;border-radius:50%;filter:blur(55px);will-change:transform;mix-blend-mode:multiply;
+    }
+    html[data-theme="dark"] .ambient-glow{mix-blend-mode:screen}
+    .ambient-glow-a{width:480px;height:480px;top:-120px;right:5%;background:radial-gradient(circle,var(--ambient-blue),transparent 68%);animation:ambientDriftA 17s ease-in-out infinite}
+    .ambient-glow-b{width:380px;height:380px;top:33%;left:-110px;background:radial-gradient(circle,var(--ambient-cyan),transparent 68%);animation:ambientDriftB 21s ease-in-out infinite}
+    .ambient-glow-c{width:430px;height:430px;bottom:-190px;right:22%;background:radial-gradient(circle,var(--ambient-gold),transparent 68%);animation:ambientDriftC 24s ease-in-out infinite}
+    .ambient-orbit{position:absolute;border:1px solid rgba(70,116,194,.08);border-radius:50%;transform:rotate(-16deg);opacity:.7}
+    html[data-theme="dark"] .ambient-orbit{border-color:rgba(125,167,236,.07)}
+    .ambient-orbit-one{width:700px;height:320px;right:-180px;top:9%}
+    .ambient-orbit-two{width:520px;height:240px;left:-180px;bottom:7%;transform:rotate(18deg)}
+    .ambient-node{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 6px rgba(37,99,235,.08),0 0 22px rgba(37,99,235,.22);opacity:.7}
+    html[data-theme="dark"] .ambient-node{box-shadow:0 0 0 6px rgba(110,168,255,.06),0 0 22px rgba(110,168,255,.24)}
+    .ambient-node.n1{top:19%;left:18%}.ambient-node.n2{top:27%;right:17%}.ambient-node.n3{bottom:25%;left:11%}.ambient-node.n4{bottom:15%;right:25%}
+    .hero{position:relative;overflow:hidden;background:transparent}
+    .hero::before{content:"";position:absolute;left:50%;top:5%;width:min(950px,92vw);height:min(680px,70vw);transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse at center,rgba(35,99,235,.10),rgba(35,99,235,.045) 38%,transparent 72%);filter:blur(12px);pointer-events:none}
+    html[data-theme="dark"] .hero::before{background:radial-gradient(ellipse at center,rgba(44,106,255,.18),rgba(44,106,255,.07) 38%,transparent 72%)}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,transparent 0 44%,rgba(10,32,72,.035) 78%,transparent 86%);pointer-events:none}
+    html[data-theme="dark"] .hero::after{background:radial-gradient(circle at 50% 40%,transparent 0 44%,rgba(0,0,0,.16) 78%,transparent 86%)}
+    .hero .container,.hero-grid,.hero-bottom{position:relative;z-index:1}
+    .hero-visual::before{content:"";position:absolute;inset:4% -5% -2% 6%;border-radius:40% 45% 48% 42%;background:radial-gradient(circle at 50% 45%,rgba(53,116,232,.18),transparent 67%);filter:blur(38px);transform:translate(calc(var(--mx,0px) * .35),calc(var(--my,0px) * .35));transition:transform .35s ease;pointer-events:none;z-index:-1}
+    html[data-theme="dark"] .hero-visual::before{background:radial-gradient(circle at 50% 45%,rgba(63,130,255,.26),transparent 67%)}
+    .proof-card{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .section-tight,.section{position:relative}
+    .section-tight:nth-of-type(2n+1)::before,.section:nth-of-type(2n+1)::before{content:"";position:absolute;width:260px;height:260px;left:-150px;top:12%;border-radius:50%;background:radial-gradient(circle,rgba(30,91,214,.055),transparent 68%);pointer-events:none}
+    html[data-theme="dark"] .section-tight:nth-of-type(2n+1)::before,html[data-theme="dark"] .section:nth-of-type(2n+1)::before{background:radial-gradient(circle,rgba(52,117,255,.08),transparent 68%)}
+    @keyframes ambientDriftA{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-35px,28px,0) scale(1.06)}}
+    @keyframes ambientDriftB{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(40px,-24px,0) scale(1.08)}}
+    @keyframes ambientDriftC{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-24px,-32px,0) scale(1.05)}}
+    @media (max-width:900px){
+      .ambient-grid{background-size:48px 48px;transform:perspective(800px) rotateX(62deg) translateY(-12%);opacity:.62}
+      .ambient-orbit{opacity:.38}
+      .ambient-glow-a{width:360px;height:360px;right:-120px}.ambient-glow-b{width:290px;height:290px;left:-140px}.ambient-glow-c{width:320px;height:320px;right:3%;bottom:-150px}
+    }
+    @media (max-width:900px){
+      .hero-vault-scene{opacity:.88}
+      .hero-vault-glow{width:430px;height:430px;left:50%;top:51%}
+      .hero-vault-tag{top:2px}
+      .hero-doc{min-width:118px;padding:8px 10px}
+      .hero-doc-1{left:0;top:64px}.hero-doc-2{right:0;top:118px}.hero-doc-3{left:10px;bottom:66px}.hero-doc-4{right:28px;bottom:18px}
+    }
+    @media (max-width:600px){
+      .ambient-grid{background-size:42px 42px;opacity:.42}
+      .ambient-orbit{display:none}
+      .ambient-node{width:5px;height:5px}
+      .hero::before{width:140vw;height:125vw;top:3%}
+      .hero-vault-scene{opacity:.64}
+      .hero-vault-tag{font-size:.46rem;padding:6px 8px}
+      .hero-doc{min-width:102px;padding:7px 8px;gap:7px;border-radius:12px}
+      .hero-doc i{width:26px;height:26px;flex-basis:26px;font-size:.75rem}
+      .hero-doc b{font-size:.56rem}.hero-doc span{font-size:.42rem}
+      .hero-doc-1{left:-4px;top:55px}.hero-doc-2{right:-4px;top:95px}.hero-doc-3{left:2px;bottom:58px}.hero-doc-4{right:12px;bottom:8px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ambient-glow-a,.ambient-glow-b,.ambient-glow-c{animation:none!important}
+      .hero-visual::before{transition:none}
+      .hero-vault-glow,.hero-doc-1,.hero-doc-2,.hero-doc-3,.hero-doc-4{animation:none!important}
+    }
+
     /* Accessibility: disable non-essential motion when requested. */
     @media (prefers-reduced-motion:reduce){
       .orb.one,.orb.two,.dashboard,.phone-3d,.notification,.ai-orb,
@@ -931,6 +1066,15 @@
   </style>
 </head>
 <body id="top">
+  <div class="ambient-scene" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow ambient-glow-a"></div>
+    <div class="ambient-glow ambient-glow-b"></div>
+    <div class="ambient-glow ambient-glow-c"></div>
+    <div class="ambient-orbit ambient-orbit-one"></div>
+    <div class="ambient-orbit ambient-orbit-two"></div>
+    <span class="ambient-node n1"></span><span class="ambient-node n2"></span><span class="ambient-node n3"></span><span class="ambient-node n4"></span>
+  </div>
   <div class="orb one"></div><div class="orb two"></div>
 
   <header id="siteHeader">
@@ -972,6 +1116,24 @@
             <p class="seo-intro">My CA Locker brings your firm’s client database, documents, filing workflow and communication into one secure CA practice management system — a practical alternative to scattered email, WhatsApp and shared-drive workflows.</p>
           </div>
           <div class="hero-visual reveal from-right" aria-label="CA Locker product preview">
+            <div class="hero-vault-scene" aria-hidden="true">
+              <div class="hero-vault-glow"></div>
+              <div class="hero-vault-tag"><i class="bi bi-shield-lock-fill"></i> Secure document vault</div>
+              <svg class="hero-vault-grid" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true">
+                <path class="net-line-glow" d="M90 150 L215 220 L400 300 L590 225 L710 150" fill="none"/>
+                <path class="net-line-glow" d="M110 470 L238 390 L400 300 L560 395 L700 470" fill="none"/>
+                <path class="net-line" d="M90 150 L215 220 L400 300 L590 225 L710 150" fill="none"/>
+                <path class="net-line" d="M110 470 L238 390 L400 300 L560 395 L700 470" fill="none"/>
+                <path class="net-line" d="M215 220 L238 390" fill="none"/>
+                <path class="net-line" d="M590 225 L560 395" fill="none"/>
+                <circle class="net-node" cx="90" cy="150" r="4"/><circle class="net-node cyan" cx="215" cy="220" r="4.5"/><circle class="net-node" cx="400" cy="300" r="6"/><circle class="net-node cyan" cx="590" cy="225" r="4.5"/><circle class="net-node" cx="710" cy="150" r="4"/>
+                <circle class="net-node" cx="110" cy="470" r="4"/><circle class="net-node cyan" cx="238" cy="390" r="4.5"/><circle class="net-node cyan" cx="560" cy="395" r="4.5"/><circle class="net-node" cx="700" cy="470" r="4"/>
+              </svg>
+              <div class="hero-doc hero-doc-1"><i class="bi bi-file-earmark-pdf-fill"></i><div><b>GST Returns</b><span>Document ready</span></div></div>
+              <div class="hero-doc hero-doc-2"><i class="bi bi-file-earmark-spreadsheet-fill"></i><div><b>Income Tax</b><span>Client workspace</span></div></div>
+              <div class="hero-doc hero-doc-3"><i class="bi bi-file-earmark-text-fill"></i><div><b>Audit Files</b><span>Activity tracked</span></div></div>
+              <div class="hero-doc hero-doc-4"><i class="bi bi-person-vcard-fill"></i><div><b>KYC Documents</b><span>Access controlled</span></div></div>
+            </div>
             <div class="glass-card dashboard">
               <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span>app.calocker.in / admin / clients</span></div>
               <div class="dash-shell">
