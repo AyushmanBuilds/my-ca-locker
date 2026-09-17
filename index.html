@@ -1,15 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CA Locker — premium multi-portal document vault and practice management for Chartered Accountants and professional firms." />
+  <meta name="description" content="My CA Locker is an India-focused CA database app and secure document locker for Chartered Accountant firms, with client portals, filing calendars, task management, notifications, audit trails and secure file sharing." />
+  <meta name="keywords" content="My CA Locker, MY CA Locker, mycalocker, CA Locker, CA database app, CA database software, CA document management software, CA document locker, Chartered Accountant software India, CA firm software, client document portal for CA, secure document vault for CA firms, CA practice management software" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#071a46" />
-  <title>MY CA Locker — Secure Document Vault for Professional Firms</title>
+  <meta name="author" content="My CA Locker" />
+  <meta name="application-name" content="My CA Locker" />
+  <link rel="canonical" href="https://mycalocker.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="My CA Locker" />
+  <meta property="og:title" content="My CA Locker | CA Database App & Document Locker for CA Firms" />
+  <meta property="og:description" content="Secure CA database and document management software for Indian Chartered Accountant firms — client portals, filing workflows, notifications, secure sharing and activity history." />
+  <meta property="og:url" content="https://mycalocker.vercel.app/" />
+  <meta property="og:image" content="https://mycalocker.vercel.app/icon-192.png" />
+  <meta property="og:image:alt" content="My CA Locker secure document and CA database software" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My CA Locker | CA Database App & Document Locker" />
+  <meta name="twitter:description" content="A secure CA database locker and document workflow platform built for Chartered Accountant firms in India." />
+  <meta name="twitter:image" content="https://mycalocker.vercel.app/icon-192.png" />
+
+  <title>My CA Locker | CA Database App & Document Locker for CA Firms in India</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://mycalocker.vercel.app/#organization",
+        "name":"My CA Locker",
+        "alternateName":["MY CA Locker","CA Locker","MyCALocker"],
+        "url":"https://mycalocker.vercel.app/"
+      },
+      {
+        "@type":"SoftwareApplication",
+        "@id":"https://mycalocker.vercel.app/#software",
+        "name":"My CA Locker",
+        "alternateName":["CA Locker","MyCALocker"],
+        "url":"https://mycalocker.vercel.app/",
+        "applicationCategory":"BusinessApplication",
+        "operatingSystem":"Web Browser",
+        "description":"A secure CA database app, document locker and practice workflow platform for Chartered Accountant firms in India.",
+        "publisher":{"@id":"https://mycalocker.vercel.app/#organization"},
+        "featureList":[
+          "Secure client document vault",
+          "Admin, Staff and Client portals",
+          "Filing calendar and reminders",
+          "Secure client sharing links",
+          "Activity history and audit trail",
+          "Task and client management",
+          "Notifications and client updates"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://mycalocker.vercel.app/#website",
+        "url":"https://mycalocker.vercel.app/",
+        "name":"My CA Locker",
+        "alternateName":["MY CA Locker","CA Locker"],
+        "publisher":{"@id":"https://mycalocker.vercel.app/#organization"},
+        "inLanguage":"en-IN"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://mycalocker.vercel.app/#webpage",
+        "url":"https://mycalocker.vercel.app/",
+        "name":"My CA Locker | CA Database App & Document Locker for CA Firms in India",
+        "isPartOf":{"@id":"https://mycalocker.vercel.app/#website"},
+        "about":{"@id":"https://mycalocker.vercel.app/#software"},
+        "description":"My CA Locker is an India-focused CA database and secure document management platform for Chartered Accountant firms.",
+        "inLanguage":"en-IN"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --navy:#081d49;
@@ -123,6 +197,8 @@
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 26px}
     .micro-proof{display:flex;gap:18px;flex-wrap:wrap;color:#68758d;font-size:.86rem;font-weight:700}
     .micro-proof span{display:inline-flex;align-items:center;gap:7px}.micro-proof i{color:var(--green)}
+    .seo-intro{margin-top:16px;max-width:690px;color:#6a758a;font-size:.9rem;line-height:1.65}
+    html[data-theme="dark"] .seo-intro{color:#a9b6cf}
     .hero-visual{position:relative;min-height:600px;perspective:1600px}
     .glass-card{position:absolute;inset:auto;border:1px solid rgba(210,220,239,.95);background:rgba(255,255,255,.82);backdrop-filter:blur(16px);box-shadow:var(--shadow);border-radius:26px}
     .dashboard{top:40px;left:0;width:92%;padding:10px;transform:rotateY(-7deg) rotateX(4deg) rotateZ(-1deg);animation:heroFloat 7s ease-in-out infinite}
@@ -858,11 +934,12 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy reveal from-left">
-            <span class="eyebrow"><i class="bi bi-shield-lock-fill"></i> Premium document workflow for professional firms</span>
+            <span class="eyebrow"><i class="bi bi-shield-lock-fill"></i> My CA Locker · CA database & document locker for Indian CA firms</span>
             <h1 id="heroTitle">Stop chasing clients for documents. <span class="gradient-text">Start managing them.</span></h1>
             <p>CA Locker gives your firm Admin, Staff, and Client portals in one secure workspace — with organized documents, filing reminders, instant notifications, shareable access, and a client experience that feels as easy as WhatsApp.</p>
             <div class="hero-actions"><a class="btn btn-primary" href="#demo">Book a Demo <i class="bi bi-arrow-right"></i></a><a class="btn btn-ghost" href="#features"><i class="bi bi-play-circle"></i> See it in action</a></div>
             <div class="micro-proof"><span><i class="bi bi-check-circle-fill"></i> Role-controlled access</span><span><i class="bi bi-check-circle-fill"></i> Audit-ready activity</span><span><i class="bi bi-check-circle-fill"></i> PWA-ready client experience</span></div>
+            <p class="seo-intro">My CA Locker brings your firm’s client database, documents, filing workflow and communication into one secure CA practice management system — a practical alternative to scattered email, WhatsApp and shared-drive workflows.</p>
           </div>
           <div class="hero-visual reveal from-right" aria-label="CA Locker product preview">
             <div class="glass-card dashboard">
@@ -896,7 +973,7 @@
     </section>
 
     <section class="section" id="portals">
-      <div class="container"><div class="section-head center reveal"><span class="eyebrow">One system · three portals</span><h2>Give every person the <span class="gradient-text">right workspace.</span></h2><p>One connected experience for partners, staff, and clients — without overwhelming anyone with the tools they do not need.</p></div>
+      <div class="container"><div class="section-head center reveal"><span class="eyebrow">One system · three portals</span><h2>My CA Locker gives every person the <span class="gradient-text">right workspace.</span></h2><p>One connected experience for partners, staff, and clients — without overwhelming anyone with the tools they do not need.</p></div>
         <div class="portal-grid">
           <article class="portal-card reveal" data-delay="1"><div class="portal-visual"><span class="portal-chip"><i class="bi bi-grid-1x2-fill"></i> ADMIN</span><div class="portal-mock"><div class="portal-row"><b>Client workspaces</b><i class="bi bi-arrow-up-right"></i></div><div class="portal-row"><span>Documents</span><span>18,642</span></div><div class="portal-row"><span>Tasks</span><span>32 open</span></div><div class="portal-row"><span>Deadlines</span><span>14 due</span></div></div></div><div class="portal-title"><h3>Admin Portal</h3><i class="bi bi-arrow-up-right"></i></div><p>Run your whole practice from one command center.</p><ul class="portal-points"><li><i class="bi bi-check2-circle"></i> Clients, documents, tasks, reports</li><li><i class="bi bi-check2-circle"></i> Firm-wide visibility and controls</li><li><i class="bi bi-check2-circle"></i> Filing calendar and activity logs</li></ul></article>
           <article class="portal-card reveal" data-delay="2"><div class="portal-visual"><span class="portal-chip"><i class="bi bi-people-fill"></i> STAFF</span><div class="portal-mock"><div class="portal-row"><b>My assigned clients</b><i class="bi bi-person-check"></i></div><div class="portal-row"><span>Upload request</span><span>6 ready</span></div><div class="portal-row"><span>Due today</span><span>4 tasks</span></div><div class="portal-row"><span>Pending review</span><span>9 items</span></div></div></div><div class="portal-title"><h3>Staff Portal</h3><i class="bi bi-arrow-up-right"></i></div><p>Keep your team focused on exactly what they own.</p><ul class="portal-points"><li><i class="bi bi-check2-circle"></i> Scoped access by assigned client</li><li><i class="bi bi-check2-circle"></i> Fast uploads and task tracking</li><li><i class="bi bi-check2-circle"></i> Cleaner handoffs across the team</li></ul></article>
@@ -943,12 +1020,12 @@
 
     <section class="section" id="pricing"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Simple commercial model</span><h2>Start with the workflow. <span class="gradient-text">Scale the workspace.</span></h2><p>Illustrative plans for the marketing site. Replace prices and limits with your final commercial model before launch.</p></div><div class="pricing-grid"><article class="price-card reveal" data-delay="1"><h3>Solo</h3><p>For independent practitioners building a cleaner client workflow.</p><div class="price">₹899<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Admin + client portal</li><li><i class="bi bi-check-circle-fill"></i> Client document vault</li><li><i class="bi bi-check-circle-fill"></i> Filing calendar</li><li><i class="bi bi-check-circle-fill"></i> Activity history</li></ul><a href="#demo" class="btn btn-ghost" style="width:100%">Book a Demo</a></article><article class="price-card popular reveal scale" data-delay="2"><span class="popular-badge">Most Popular</span><h3>Team</h3><p>For growing firms that need staff access and shared visibility.</p><div class="price">Custom<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Everything in Solo</li><li><i class="bi bi-check-circle-fill"></i> Staff portal + scoped access</li><li><i class="bi bi-check-circle-fill"></i> Tasks & client assignments</li><li><i class="bi bi-check-circle-fill"></i> Client messaging</li></ul><a href="#demo" class="btn btn-primary" style="width:100%">Talk to Us</a></article><article class="price-card reveal" data-delay="3"><h3>Firm</h3><p>For established practices with broader reporting and control needs.</p><div class="price">Custom<span> / month</span></div><ul class="price-features"><li><i class="bi bi-check-circle-fill"></i> Everything in Team</li><li><i class="bi bi-check-circle-fill"></i> Reports & insights</li><li><i class="bi bi-check-circle-fill"></i> AI assistant</li><li><i class="bi bi-check-circle-fill"></i> Onboarding support</li></ul><a href="#demo" class="btn btn-ghost" style="width:100%">Book a Demo</a></article></div></div></section>
 
-    <section class="section-tight" id="faq"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Questions, answered</span><h2>Designed around the objections you’ll hear first.</h2></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">Do my clients need to download an app?<i class="bi bi-plus-lg"></i></button><div class="faq-a">No. The client experience can open from a secure link in a browser and can be installed like an app on supported devices.</div></div><div class="faq-item"><button class="faq-q">Is my data safe if I switch staff or employees?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Access is designed to be controlled by person and role, so permissions can be changed or revoked without handing around shared credentials.</div></div><div class="faq-item"><button class="faq-q">What if a client loses their phone?<i class="bi bi-plus-lg"></i></button><div class="faq-a">You can revoke the active client link and issue a new one, keeping the access path under your firm’s control.</div></div><div class="faq-item"><button class="faq-q">Can I create my own document categories?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. The product is positioned around configurable document categories, so you can match the workflow to your practice.</div></div><div class="faq-item"><button class="faq-q">Can I try it before I buy?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. Use the demo request above or open the sample workspace to understand the workflow before committing.</div></div></div></div></section>
+    <section class="section-tight" id="faq"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Questions, answered</span><h2>Designed around the objections you’ll hear first.</h2></div><div class="faq reveal"><div class="faq-item"><button class="faq-q">Do my clients need to download an app?<i class="bi bi-plus-lg"></i></button><div class="faq-a">No. The client experience can open from a secure link in a browser and can be installed like an app on supported devices.</div></div><div class="faq-item"><button class="faq-q">Is my data safe if I switch staff or employees?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Access is designed to be controlled by person and role, so permissions can be changed or revoked without handing around shared credentials.</div></div><div class="faq-item"><button class="faq-q">What if a client loses their phone?<i class="bi bi-plus-lg"></i></button><div class="faq-a">You can revoke the active client link and issue a new one, keeping the access path under your firm’s control.</div></div><div class="faq-item"><button class="faq-q">Can I create my own document categories?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. The product is positioned around configurable document categories, so you can match the workflow to your practice.</div></div><div class="faq-item"><button class="faq-q">Can I try the CA database and document locker before I buy?<i class="bi bi-plus-lg"></i></button><div class="faq-a">Yes. Use the demo request above or open the sample workspace to understand the workflow before committing.</div></div></div></div></section>
 
     <section class="section-tight" style="padding-top:0"><div class="container"><div class="final-band reveal scale"><div><h2>Stop chasing documents. Start running a system.</h2><p>See the workflow in a 15-minute walkthrough.</p></div><a href="#demo" class="btn">Book a Demo <i class="bi bi-arrow-right"></i></a></div></div></section>
   </main>
 
-  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="CA Locker logo" /><span>CA Locker</span></a><p>Secure document vault and practice workflow for firms that exchange sensitive information with clients every day.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Pricing</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#top">About</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 CA Locker. All rights reserved.</span><span>Marketing prototype · Replace placeholder claims before launch.</span></div></div></footer>
+  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="CA Locker logo" /><span>CA Locker</span></a><p>My CA Locker is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Pricing</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#top">About</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 CA Locker. All rights reserved.</span><span>Marketing prototype · Replace placeholder claims before launch.</span></div></div></footer>
 
   <script>
     // Dark mode toggle — persisted in localStorage, falls back to system preference
