@@ -253,6 +253,72 @@
       .whatsapp-fab{width:50px;height:50px;font-size:1.35rem}
     }
 
+    /* ---------- DARK MODE HARDENING ---------- */
+    html[data-theme="dark"] .btn-ghost,
+    html[data-theme="dark"] .mobile-toggle,
+    html[data-theme="dark"] .theme-toggle,
+    html[data-theme="dark"] .glass-card,
+    html[data-theme="dark"] .dash-shell,
+    html[data-theme="dark"] .kpi,
+    html[data-theme="dark"] .client-banner,
+    html[data-theme="dark"] .phone-file,
+    html[data-theme="dark"] .notification,
+    html[data-theme="dark"] .portal-mock,
+    html[data-theme="dark"] .folder-box,
+    html[data-theme="dark"] .folder,
+    html[data-theme="dark"] .searchbox,
+    html[data-theme="dark"] .day,
+    html[data-theme="dark"] .notif-mini,
+    html[data-theme="dark"] .report-chart,
+    html[data-theme="dark"] .message-box,
+    html[data-theme="dark"] .quote,
+    html[data-theme="dark"] .price-card,
+    html[data-theme="dark"] .portal-card,
+    html[data-theme="dark"] .pain,
+    html[data-theme="dark"] .demo-form{
+      background:#121a2e;
+      border-color:rgba(255,255,255,.09);
+      color:var(--ink);
+    }
+    html[data-theme="dark"] .dash-side{background:linear-gradient(180deg,#111b31,#0e1729);}
+    html[data-theme="dark"] .dash-main{color:var(--ink);}
+    html[data-theme="dark"] .side-link{color:#9aa8c2;}
+    html[data-theme="dark"] .side-link.active{background:rgba(110,168,255,.16);color:#a9c9ff;}
+    html[data-theme="dark"] .dash-shell,html[data-theme="dark"] .client-banner{box-shadow:0 24px 50px rgba(0,0,0,.32);}
+    html[data-theme="dark"] .browser-bar{color:#7f8da7;}
+    html[data-theme="dark"] .dash-head span,
+    html[data-theme="dark"] .dash-kpis .kpi small,
+    html[data-theme="dark"] .client-banner small,
+    html[data-theme="dark"] .phone-top,
+    html[data-theme="dark"] .phone-file,
+    html[data-theme="dark"] .portal-row,
+    html[data-theme="dark"] .folder,
+    html[data-theme="dark"] .searchbox,
+    html[data-theme="dark"] .notif-mini{color:#9aa7c2;}
+    html[data-theme="dark"] .client-banner h4,
+    html[data-theme="dark"] .dash-head b,
+    html[data-theme="dark"] .kpi strong,
+    html[data-theme="dark"] .portal-title h3,
+    html[data-theme="dark"] .feature-copy h3{color:#e7ecf7;}
+    html[data-theme="dark"] .client-banner{background:linear-gradient(135deg,#14213b,#101a30);}
+    html[data-theme="dark"] .portal-chip{background:rgba(110,168,255,.12);border-color:rgba(110,168,255,.2);}
+    html[data-theme="dark"] .portal-row,.html[data-theme="dark"] .folder,.html[data-theme="dark"] .phone-file{border-color:rgba(255,255,255,.07);}
+    html[data-theme="dark"] .day.hot{background:rgba(110,168,255,.15);color:#a9c9ff;}
+    html[data-theme="dark"] .day.alert{background:rgba(210,167,72,.14);color:#e8c877;}
+    html[data-theme="dark"] .field label{color:#aab7ce;}
+    html[data-theme="dark"] .field input{background:#0d1526;border-color:rgba(255,255,255,.12);color:#e7ecf7;}
+    html[data-theme="dark"] .field input::placeholder{color:#6f7e98;}
+    html[data-theme="dark"] .form-note{color:#7f8da7;}
+    html[data-theme="dark"] .demo-pill{background:rgba(110,168,255,.12);color:#a9c9ff;}
+    html[data-theme="dark"] .popular-badge{background:rgba(110,168,255,.14);color:#a9c9ff;}
+    html[data-theme="dark"] .faq-q{color:#e7ecf7;}
+    html[data-theme="dark"] .faq-a{color:#9aa7c2;}
+    html[data-theme="dark"] .section-head p{color:#9aa7c2;}
+    html[data-theme="dark"] .hero-copy p{color:#a9b6cf;}
+    html[data-theme="dark"] .final-band .btn{background:#fff;color:#123b86;}
+    html[data-theme="dark"] .mobile-menu-panel a:not(.btn){color:#dbe5f7;}
+    html[data-theme="dark"] .mobile-menu-panel a:not(.btn):hover{background:rgba(110,168,255,.1);}
+
     /* responsive */
     @media (max-width:1080px){.hero-grid{grid-template-columns:1fr}.hero-copy{max-width:760px}.hero-visual{max-width:760px;width:100%;margin-inline:auto}.hero-bottom{grid-template-columns:repeat(2,1fr)}.nav-links{gap:17px}.feature{gap:36px}.ai-grid{grid-template-columns:1fr}.ai-orb{margin:0 auto}.ai-wrap{padding:38px}.security-layout{grid-template-columns:1fr}.footer-grid{grid-template-columns:1.4fr .8fr .8fr .8fr}}
     @media (max-width:900px){.section{padding:90px 0}.nav-links,.nav-actions .btn{display:none}.mobile-toggle{display:grid;place-items:center}.nav-shell{height:66px}.pain-grid,.portal-grid,.testimonial-grid,.pricing-grid{grid-template-columns:1fr}.portal-card,.pain,.quote,.price-card{max-width:650px;width:100%;margin-inline:auto}.price-card.popular{transform:none}.feature{grid-template-columns:1fr;gap:28px}.feature:nth-child(even) .feature-copy,.feature:nth-child(even) .feature-visual{order:initial}.feature-visual{min-height:350px}.demo-shell{grid-template-columns:1fr}.final-band{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
@@ -566,7 +632,7 @@
   </header>
 
   <div class="floating-actions" aria-label="Quick actions">
-    <a class="guest-fab" id="guestModeFab" href="https://mycalocker.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Try CA Locker in Guest Mode">
+    <a class="guest-fab" id="guestModeFab" href="https://mycalocker.netlify.app/?guest=1" target="_blank" rel="noopener noreferrer" aria-label="Try CA Locker in Guest Mode">
       <span class="fab-icon"><i class="bi bi-play-fill"></i></span>
       <span class="fab-copy"><strong>Try in Guest Mode</strong><span>Start Managing them <i class="bi bi-arrow-right"></i></span></span>
     </a>
@@ -658,7 +724,7 @@
     </section>
 
     <section class="section" id="demo">
-      <div class="container"><div class="section-head center reveal"><span class="eyebrow"><i class="bi bi-play-circle"></i> Try it yourself</span><h2>Explore the workflow before you commit.</h2><p>Request a walkthrough or open a sample workspace with fictional data. No complicated setup.</p></div><div class="demo-shell reveal scale"><div class="demo-copy"><span class="eyebrow">15-minute walkthrough</span><h3>See how a document moves from upload to client delivery — without the WhatsApp chase.</h3><p>We’ll show the admin workflow, staff handoff, client experience, reminders, links, and activity history.</p><div class="demo-pills"><span class="demo-pill">Admin portal</span><span class="demo-pill">Staff portal</span><span class="demo-pill">Client portal</span><span class="demo-pill">Filing reminders</span><span class="demo-pill">Audit trail</span></div><div style="margin-top:24px"><a class="btn btn-ghost" href="https://mycalocker.netlify.app/" target="_blank" rel="noopener noreferrer" data-demo><i class="bi bi-box-arrow-up-right"></i> Open sample demo</a></div></div><form class="demo-form" id="demoForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="e.g. Ayushman Acharya"></div><div class="field"><label for="email">Work email</label><input id="email" type="email" required placeholder="you@firm.com"></div><div class="field"><label for="firm">Firm name</label><input id="firm" required placeholder="Your firm name"></div><div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91 98xxxxxxx"></div><button class="btn btn-primary" style="width:100%" type="submit">Book my demo <i class="bi bi-arrow-right"></i></button><div class="form-status" id="formStatus">Thanks — your demo request has been captured locally for this prototype.</div><div class="form-note"><strong>WhatsApp delivery:</strong> submitting opens a pre-filled WhatsApp message to +91 80180 17529.</div></form></div></div>
+      <div class="container"><div class="section-head center reveal"><span class="eyebrow"><i class="bi bi-play-circle"></i> Try it yourself</span><h2>Explore the workflow before you commit.</h2><p>Request a walkthrough or open a sample workspace with fictional data. No complicated setup.</p></div><div class="demo-shell reveal scale"><div class="demo-copy"><span class="eyebrow">15-minute walkthrough</span><h3>See how a document moves from upload to client delivery — without the WhatsApp chase.</h3><p>We’ll show the admin workflow, staff handoff, client experience, reminders, links, and activity history.</p><div class="demo-pills"><span class="demo-pill">Admin portal</span><span class="demo-pill">Staff portal</span><span class="demo-pill">Client portal</span><span class="demo-pill">Filing reminders</span><span class="demo-pill">Audit trail</span></div><div style="margin-top:24px"><a class="btn btn-ghost" href="https://mycalocker.netlify.app/?guest=1" target="_blank" rel="noopener noreferrer" data-demo><i class="bi bi-box-arrow-up-right"></i> Open sample demo</a></div></div><form class="demo-form" id="demoForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="e.g. Ayushman Acharya"></div><div class="field"><label for="email">Work email</label><input id="email" type="email" required placeholder="you@firm.com"></div><div class="field"><label for="firm">Firm name</label><input id="firm" required placeholder="Your firm name"></div><div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91 98xxxxxxx"></div><button class="btn btn-primary" style="width:100%" type="submit">Book my demo <i class="bi bi-arrow-right"></i></button><div class="form-status" id="formStatus">Thanks — your demo request has been captured locally for this prototype.</div><div class="form-note"><strong>WhatsApp delivery:</strong> submitting opens a pre-filled WhatsApp message to +91 80180 17529.</div></form></div></div>
     </section>
 
     <section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] CA Locker helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
@@ -680,8 +746,9 @@
       const icon = document.getElementById('themeIcon');
       const metaTheme = document.querySelector('meta[name="theme-color"]');
       const stored = localStorage.getItem('ca-locker-theme');
-      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      let isDark = stored ? stored === 'dark' : systemDark;
+      // Always start in light mode unless the visitor explicitly chose dark mode.
+      // Never inherit the operating-system/browser dark preference automatically.
+      let isDark = stored === 'dark';
 
       function applyTheme(dark){
         root.setAttribute('data-theme', dark ? 'dark' : 'light');
@@ -697,10 +764,7 @@
         applyTheme(isDark);
       });
 
-      // Follow system changes only if the user hasn't explicitly chosen a theme
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (!localStorage.getItem('ca-locker-theme')) applyTheme(e.matches);
-      });
+      // Do not follow OS/browser theme changes automatically. The visitor controls the theme.
     })();
 
     // Header depth on scroll
@@ -753,7 +817,7 @@
     const demoForm = document.getElementById('demoForm');
     const formStatus = document.getElementById('formStatus');
     const whatsappNumber = '918018017529';
-    const guestModeUrl = 'https://mycalocker.netlify.app/';
+    const guestModeUrl = 'https://mycalocker.netlify.app/?guest=1';
 
     function openWhatsApp(message){
       const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -786,9 +850,11 @@
     });
 
     // Make every "Open sample demo" trigger open the real guest workspace.
-    document.querySelectorAll('[data-demo]').forEach(btn=>btn.addEventListener('click', e=>{
+    document.querySelectorAll('[data-demo], #guestModeFab').forEach(btn=>btn.addEventListener('click', e=>{
       e.preventDefault();
-      window.open(guestModeUrl, '_blank', 'noopener,noreferrer');
+      // Direct navigation is intentional: the app recognizes ?guest=1 and
+      // enters its seeded, read-only demo before Firebase auth is evaluated.
+      window.location.assign(guestModeUrl);
     }));
 
     // Floating WhatsApp button
