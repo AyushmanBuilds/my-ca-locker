@@ -726,6 +726,67 @@
     @media(max-width:900px){.founder-shell{grid-template-columns:1fr;gap:34px}.founder-portrait-wrap{min-height:470px}.founder-copy{max-width:760px;margin-inline:auto}}
     @media(max-width:600px){.founder-portrait-wrap{min-height:400px}.founder-photo-frame{width:min(330px,82vw)}.founder-float.one{left:-2px;top:28px}.founder-float.two{right:-2px;bottom:25px}.founder-story-grid{grid-template-columns:1fr}.founder-copy h2{font-size:2.55rem}.founder-copy .lead{font-size:.98rem}}
 
+
+    /* =========================================================
+       AUTOMATIC CA FEEDBACK MARQUEE
+       These are illustrative CA perspectives, not claimed client
+       testimonials. Replace with verified testimonials as they
+       become available.
+       ========================================================= */
+    .ca-feedback-section{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 12% 20%,rgba(45,111,231,.07),transparent 30%),
+      radial-gradient(circle at 88% 75%,rgba(210,167,72,.07),transparent 28%),
+      #f8fbff}
+    .ca-feedback-note{font-size:.73rem!important;color:#8995a8!important;margin:8px auto 0!important}
+    .ca-feedback-window{position:relative;overflow:hidden;margin-top:42px;
+      padding:8px 0 24px}
+    .ca-feedback-window::before,.ca-feedback-window::after{content:"";position:absolute;top:0;bottom:0;width:12%;
+      z-index:3;pointer-events:none}
+    .ca-feedback-window::before{left:0;background:linear-gradient(90deg,#f8fbff,rgba(248,251,255,0))}
+    .ca-feedback-window::after{right:0;background:linear-gradient(270deg,#f8fbff,rgba(248,251,255,0))}
+    .ca-feedback-track{display:flex;width:max-content;animation:caFeedbackScroll 92s linear infinite}
+    .ca-feedback-set{display:flex;gap:18px;padding-right:18px}
+    .ca-feedback-track:hover{animation-play-state:paused}
+    .ca-feedback-card{width:335px;flex:0 0 335px;min-height:214px;padding:22px;
+      border:1px solid #e1e9f4;border-radius:22px;background:rgba(255,255,255,.92);
+      box-shadow:0 16px 38px rgba(25,55,105,.07);display:flex;flex-direction:column;
+      justify-content:space-between;transition:transform .3s ease,box-shadow .3s ease}
+    .ca-feedback-card:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(25,55,105,.11)}
+    .ca-feedback-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .ca-feedback-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;
+      background:#edf4ff;color:#2058ad;font-size:.61rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .ca-feedback-badge i{font-size:.72rem}
+    .ca-feedback-quote{margin:18px 0 21px;color:#43526b;font-size:.84rem;line-height:1.7}
+    .ca-feedback-footer{display:flex;align-items:center;gap:10px}
+    .ca-feedback-avatar{width:38px;height:38px;flex:0 0 38px;border-radius:13px;display:grid;place-items:center;
+      background:linear-gradient(135deg,#e9f1ff,#f9fbff);border:1px solid #d9e6fa;color:#174b9c;font:900 .62rem Manrope}
+    .ca-feedback-footer b{display:block;font:800 .7rem Manrope;color:#172a4c}
+    .ca-feedback-footer span{display:block;color:#8a95a7;font-size:.58rem;margin-top:2px}
+    .ca-feedback-verified{font-size:.57rem;color:#7c899d}
+    @keyframes caFeedbackScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    html[data-theme="dark"] .ca-feedback-section{background:
+      radial-gradient(circle at 12% 20%,rgba(70,120,230,.12),transparent 30%),
+      linear-gradient(180deg,#0c1527,#0b1322)}
+    html[data-theme="dark"] .ca-feedback-note{color:#7f8da7!important}
+    html[data-theme="dark"] .ca-feedback-window::before{background:linear-gradient(90deg,#0c1527,rgba(12,21,39,0))}
+    html[data-theme="dark"] .ca-feedback-window::after{background:linear-gradient(270deg,#0c1527,rgba(12,21,39,0))}
+    html[data-theme="dark"] .ca-feedback-card{background:rgba(18,27,46,.94);border-color:rgba(255,255,255,.08);box-shadow:0 16px 38px rgba(0,0,0,.26)}
+    html[data-theme="dark"] .ca-feedback-card:hover{box-shadow:0 24px 48px rgba(0,0,0,.38)}
+    html[data-theme="dark"] .ca-feedback-badge{background:rgba(110,168,255,.13);color:#a7c8ff}
+    html[data-theme="dark"] .ca-feedback-quote{color:#c1cde1}
+    html[data-theme="dark"] .ca-feedback-avatar{background:rgba(110,168,255,.12);border-color:rgba(110,168,255,.18);color:#a9c9ff}
+    html[data-theme="dark"] .ca-feedback-footer b{color:#eef3ff}
+    html[data-theme="dark"] .ca-feedback-footer span,html[data-theme="dark"] .ca-feedback-verified{color:#8d9bb4}
+    @media(max-width:720px){
+      .ca-feedback-window{margin-top:28px}
+      .ca-feedback-card{width:286px;flex-basis:286px;min-height:205px;padding:18px}
+      .ca-feedback-quote{font-size:.79rem}
+      .ca-feedback-track{animation-duration:76s}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .ca-feedback-track{animation:none!important}
+    }
+
     /* =========================================================
        RESPONSIVE HARDENING — v2
        Prevents horizontal overflow and improves phone/tablet
@@ -1281,7 +1342,545 @@
       </div>
     </section>
 
-<section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] MY CA LOCKER helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
+    <section class="section-tight ca-feedback-section" aria-labelledby="feedbackTitle">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><i class="bi bi-chat-quote-fill"></i> CA workflow perspectives</span>
+          <h2 id="feedbackTitle">How MY CA LOCKER can <span class="gradient-text">make the work easier.</span></h2>
+          <p>20 illustrative perspectives written from common CA-firm workflows. Replace these with verified client testimonials as you collect them.</p>
+          <p class="ca-feedback-note">These are sample statements, not endorsements or verified customer reviews.</p>
+        </div>
+
+        <div class="ca-feedback-window" aria-label="Automatically scrolling illustrative CA feedback">
+          <div class="ca-feedback-track" id="caFeedbackTrack">
+            <div class="ca-feedback-set">
+              <article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Audit”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER gives us one place to organize client documents instead of searching through multiple chats and folders.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — GST Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The client portal makes document collection much cleaner. Clients know exactly where to upload and find files.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Accounting Firm”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Having client records, files and follow-ups together has made our daily workflow much easier to manage.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax Consultant”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The biggest benefit is visibility. Our team can see what is pending without repeatedly asking one another for updates.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Audit Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We can keep supporting documents organized by client and access them through a much more structured workflow.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Compliance Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The filing and reminder workflow helps us keep important dates visible instead of relying only on personal trackers.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — SME Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER feels designed around the way a CA firm actually handles client information and communication.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Sharing documents with clients is simpler because we can send them through a dedicated client experience.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Virtual CA Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The staff portal gives our team clearer ownership of work and reduces unnecessary back-and-forth.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Audit & Assurance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Keeping activity history alongside client files gives us a much clearer picture of what happened and when.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Income Tax Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We spend less time hunting for the latest document and more time working on the actual client requirement.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Accounting & GST”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The interface is straightforward enough that our staff can understand the workflow without a long learning curve.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Business Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Having documents, client communication and workflow information together feels far more manageable than disconnected tools.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Statutory Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Client notifications make it easier to keep people informed when new documents or updates are available.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Partnership Firm”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>A centralized client workspace helps us maintain a more consistent process across different team members.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Audit Services”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER helps bring structure to the repetitive document work that takes up a surprising amount of time.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Startup Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The client-facing side is simple, which matters because we do not want technology to become another barrier for clients.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Finance & Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We get a cleaner separation between internal staff work and what the client needs to see or do.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Multi-client Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The ability to keep client documents organized in one workflow makes day-to-day practice management much easier.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Professional Services”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>It gives us a more organized digital foundation for managing documents, people and client communication in one place.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+            </div>
+            <div class="ca-feedback-set" aria-hidden="true">
+              <article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Audit”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER gives us one place to organize client documents instead of searching through multiple chats and folders.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — GST Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The client portal makes document collection much cleaner. Clients know exactly where to upload and find files.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Accounting Firm”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Having client records, files and follow-ups together has made our daily workflow much easier to manage.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax Consultant”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The biggest benefit is visibility. Our team can see what is pending without repeatedly asking one another for updates.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Audit Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We can keep supporting documents organized by client and access them through a much more structured workflow.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Compliance Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The filing and reminder workflow helps us keep important dates visible instead of relying only on personal trackers.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — SME Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER feels designed around the way a CA firm actually handles client information and communication.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Sharing documents with clients is simpler because we can send them through a dedicated client experience.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Virtual CA Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The staff portal gives our team clearer ownership of work and reduces unnecessary back-and-forth.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Audit & Assurance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Keeping activity history alongside client files gives us a much clearer picture of what happened and when.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Income Tax Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We spend less time hunting for the latest document and more time working on the actual client requirement.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Accounting & GST”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The interface is straightforward enough that our staff can understand the workflow without a long learning curve.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Business Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Having documents, client communication and workflow information together feels far more manageable than disconnected tools.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Statutory Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>Client notifications make it easier to keep people informed when new documents or updates are available.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Partnership Firm”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>A centralized client workspace helps us maintain a more consistent process across different team members.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Tax & Audit Services”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>MY CA LOCKER helps bring structure to the repetitive document work that takes up a surprising amount of time.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Startup Advisory”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The client-facing side is simple, which matters because we do not want technology to become another barrier for clients.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Finance & Compliance”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>We get a cleaner separation between internal staff work and what the client needs to see or do.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Multi-client Practice”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>The ability to keep client documents organized in one workflow makes day-to-day practice management much easier.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+<article class="ca-feedback-card">
+  <div>
+    <div class="ca-feedback-top">
+      <span class="ca-feedback-badge"><i class="bi bi-person-badge-fill"></i> CA Perspective</span>
+      <span class="ca-feedback-verified">Illustrative</span>
+    </div>
+    <p class="ca-feedback-quote">“CA — Professional Services”</p>
+  </div>
+  <div class="ca-feedback-footer">
+    <div class="ca-feedback-avatar">CA</div>
+    <div><b>It gives us a more organized digital foundation for managing documents, people and client communication in one place.</b><span>Chartered Accountant perspective</span></div>
+  </div>
+</article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="pricing">
       <div class="container">
@@ -1329,6 +1928,23 @@
   <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="MY CA LOCKER logo" /><span>MY CA LOCKER</span></a><p>MY CA LOCKER is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Talk to Us</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#about-founder">About the Founder</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 MY CA LOCKER. All rights reserved.</span><span>Made by<b>Ayushmanbuilds</b></span></div></div></footer>
 
   <script>
+
+    // Randomize the illustrative CA feedback order on each page load.
+    (function(){
+      const track = document.getElementById('caFeedbackTrack');
+      if(!track) return;
+      const sets = track.querySelectorAll('.ca-feedback-set');
+      if(!sets.length) return;
+      const source = Array.from(sets[0].children);
+      for(let i = source.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [source[i], source[j]] = [source[j], source[i]];
+      }
+      const shuffled = source.map(card => card.cloneNode(true));
+      sets[0].replaceChildren(...shuffled);
+      sets[1].replaceChildren(...shuffled.map(card => card.cloneNode(true)));
+    })();
+
     // Dark mode toggle — persisted in localStorage, falls back to system preference
     (function(){
       const root = document.documentElement;
