@@ -86,6 +86,15 @@
         "description":"MY CA LOCKER is an India-focused CA database and secure document management platform for Chartered Accountant firms.",
         "inLanguage":"en-IN"
       }
+,
+      {
+        "@type":"Person",
+        "@id":"https://mycalocker.vercel.app/#founder",
+        "name":"Ayushman Acharya",
+        "jobTitle":"Founder & Developer",
+        "url":"https://mycalocker.vercel.app/#about-founder",
+        "worksFor":{"@id":"https://mycalocker.vercel.app/#organization"}
+      }
     ]
   }
   </script>
@@ -681,6 +690,42 @@
     @media (max-width:480px){.section{padding:67px 0}.hero{padding-top:124px}.hero-visual{min-height:415px}.dashboard{top:16px;width:100%}.dash-shell{grid-template-columns:90px 1fr;min-height:275px}.side-link{font-size:.52rem}.mini-brand{font-size:.6rem}.mini-brand img{width:20px;height:20px}.dash-head b{font-size:.72rem}.client-row{font-size:.5rem}.phone-3d{width:146px;border-width:5px;border-radius:24px}.phone-screen{border-radius:17px;min-height:300px}.notification{top:0;right:0;width:190px}.notification span{display:none}.hero-bottom{gap:8px}.proof-card{padding:11px 10px}.proof-card i{font-size:.9rem}.proof-card span{font-size:.62rem}.section-head h2{font-size:2.2rem}.feature-copy h3{font-size:2rem}.footer-grid{grid-template-columns:1fr}.nav-shell{border-radius:16px}.ai-command{bottom:-22px}.final-band .btn{width:100%}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.orb,.dashboard,.phone-3d,.notification,.ai-orb,.ai-orb::before,.ai-orb::after{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
 
+
+    /* Founder story */
+    .founder-section{position:relative;overflow:hidden;background:radial-gradient(circle at 8% 15%,rgba(38,103,218,.08),transparent 30%),radial-gradient(circle at 92% 80%,rgba(210,167,72,.09),transparent 28%),linear-gradient(180deg,#fff 0%,#f7fbff 100%)}
+    .founder-shell{display:grid;grid-template-columns:.86fr 1.14fr;gap:64px;align-items:center}
+    .founder-portrait-wrap{position:relative;min-height:540px;display:grid;place-items:center}
+    .founder-portrait-glow{position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(45,111,231,.18),rgba(45,111,231,.05) 52%,transparent 70%);filter:blur(2px)}
+    .founder-photo-frame{position:relative;width:min(430px,88%);aspect-ratio:1/1;border-radius:50%;padding:9px;background:linear-gradient(145deg,#fff,#dfeaff);box-shadow:0 35px 90px rgba(12,45,103,.18),0 0 0 1px rgba(255,255,255,.9);z-index:2}
+    .founder-photo-frame::before{content:"";position:absolute;inset:-17px;border-radius:50%;border:1px solid rgba(43,99,201,.15);transform:rotate(8deg)}
+    .founder-photo{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    .founder-float{position:absolute;z-index:3;padding:13px 16px;border:1px solid rgba(255,255,255,.8);border-radius:17px;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);box-shadow:0 18px 42px rgba(23,54,104,.12);display:flex;align-items:center;gap:10px}
+    .founder-float i{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:#eaf2ff;color:var(--blue)}
+    .founder-float b{display:block;font:800 .72rem Manrope}
+    .founder-float span{display:block;color:#7c8799;font-size:.57rem;margin-top:2px}
+    .founder-float.one{left:0;top:58px}.founder-float.two{right:-5px;bottom:58px}
+    .founder-copy h2{font:800 clamp(2.35rem,4.2vw,4.2rem)/1.02 Manrope;letter-spacing:-.055em;margin:18px 0}
+    .founder-copy .lead{font-size:1.08rem;color:#56647b;max-width:650px}
+    .founder-name{display:flex;align-items:center;gap:13px;margin-top:25px}
+    .founder-name-mark{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#eaf2ff,#fff);border:1px solid #dce7f7;color:var(--blue);font-weight:900}
+    .founder-name b{display:block;font:800 1rem Manrope}.founder-name span{display:block;color:#8490a3;font-size:.72rem}
+    .founder-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+    .founder-story-card{padding:20px;border:1px solid #e2eaf5;border-radius:19px;background:rgba(255,255,255,.8);box-shadow:0 12px 32px rgba(24,54,104,.045)}
+    .founder-story-card i{width:37px;height:37px;border-radius:11px;display:grid;place-items:center;background:#eef4ff;color:var(--blue);margin-bottom:12px}
+    .founder-story-card h3{font:800 .92rem Manrope;margin-bottom:6px}.founder-story-card p{color:#707c90;font-size:.78rem;line-height:1.65}
+    .founder-quote{margin-top:22px;padding:18px 20px;border-left:3px solid #2b63c9;background:linear-gradient(90deg,#f0f6ff,rgba(240,246,255,0));border-radius:0 15px 15px 0;color:#263b62;font:600 italic .9rem/1.65 Manrope}
+    .founder-quote span{display:block;margin-top:7px;color:#7d899e;font:700 .68rem DM Sans;font-style:normal}
+    html[data-theme="dark"] .founder-section{background:radial-gradient(circle at 8% 15%,rgba(70,120,230,.16),transparent 30%),linear-gradient(180deg,#0b1220,#0d1729)}
+    html[data-theme="dark"] .founder-copy .lead{color:#aab7ce}
+    html[data-theme="dark"] .founder-photo-frame{background:linear-gradient(145deg,#182744,#0d1729);box-shadow:0 35px 90px rgba(0,0,0,.5)}
+    html[data-theme="dark"] .founder-float,html[data-theme="dark"] .founder-story-card{background:rgba(18,26,46,.82);border-color:rgba(255,255,255,.08)}
+    html[data-theme="dark"] .founder-float span,html[data-theme="dark"] .founder-story-card p{color:#9aa7c2}
+    html[data-theme="dark"] .founder-name span{color:#8d9ab2}
+    html[data-theme="dark"] .founder-story-card i{background:rgba(110,168,255,.14)}
+    html[data-theme="dark"] .founder-quote{background:linear-gradient(90deg,rgba(55,102,190,.13),transparent);color:#dce7fb}
+    @media(max-width:900px){.founder-shell{grid-template-columns:1fr;gap:34px}.founder-portrait-wrap{min-height:470px}.founder-copy{max-width:760px;margin-inline:auto}}
+    @media(max-width:600px){.founder-portrait-wrap{min-height:400px}.founder-photo-frame{width:min(330px,82vw)}.founder-float.one{left:-2px;top:28px}.founder-float.two{right:-2px;bottom:25px}.founder-story-grid{grid-template-columns:1fr}.founder-copy h2{font-size:2.55rem}.founder-copy .lead{font-size:.98rem}}
+
     /* =========================================================
        RESPONSIVE HARDENING — v2
        Prevents horizontal overflow and improves phone/tablet
@@ -1086,7 +1131,7 @@
           <span>MY CA LOCKER</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="#portals">Portals</a><a href="#features">Features</a><a href="#security">Security</a><a href="#demo">Demo</a><a href="#pricing">Talk to Us</a><a href="#faq">FAQ</a>
+          <a href="#portals">Portals</a><a href="#features">Features</a><a href="#security">Security</a><a href="#about-founder">About the Founder</a><a href="#demo">Demo</a><a href="#pricing">Talk to Us</a><a href="#faq">FAQ</a>
         </nav>
         <div class="nav-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill" id="themeIcon"></i></button><a class="btn btn-primary" href="#demo">Book a Demo <i class="bi bi-arrow-up-right"></i></a><button class="mobile-toggle" id="mobileToggle" aria-label="Open menu"><i class="bi bi-list"></i></button></div>
       </div>
@@ -1209,7 +1254,34 @@
       <div class="container"><div class="section-head center reveal"><span class="eyebrow"><i class="bi bi-play-circle"></i> Try it yourself</span><h2>Explore the workflow before you commit.</h2><p>Request a walkthrough or open a sample workspace with fictional data. No complicated setup.</p></div><div class="demo-shell reveal scale"><div class="demo-copy"><span class="eyebrow">15-minute walkthrough</span><h3>See how a document moves from upload to client delivery — without the WhatsApp chase.</h3><p>We’ll show the admin workflow, staff handoff, client experience, reminders, links, and activity history.</p><div class="demo-pills"><span class="demo-pill">Admin portal</span><span class="demo-pill">Staff portal</span><span class="demo-pill">Client portal</span><span class="demo-pill">Filing reminders</span><span class="demo-pill">Audit trail</span></div><div style="margin-top:24px"><a class="btn btn-ghost" href="https://mycalocker.netlify.app/?guest=1" target="_blank" rel="noopener noreferrer" data-demo><i class="bi bi-box-arrow-up-right"></i> Open sample demo</a></div></div><form class="demo-form" id="demoForm"><div class="field"><label for="name">Your name</label><input id="name" required placeholder="e.g. Ayushman Acharya"></div><div class="field"><label for="email">Work email</label><input id="email" type="email" required placeholder="you@firm.com"></div><div class="field"><label for="firm">Firm name</label><input id="firm" required placeholder="Your firm name"></div><div class="field"><label for="phone">Phone</label><input id="phone" required placeholder="+91 98xxxxxxx"></div><button class="btn btn-primary" style="width:100%" type="submit">Book my demo <i class="bi bi-arrow-right"></i></button><div class="form-status" id="formStatus">Thanks — your demo request has been captured locally for this prototype.</div><div class="form-note"><strong>WhatsApp delivery:</strong> submitting opens a pre-filled WhatsApp message to +91 80180 17529.</div></form></div></div>
     </section>
 
-    <section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] MY CA LOCKER helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
+    
+    <section class="section founder-section" id="about-founder" aria-labelledby="founderTitle">
+      <div class="container">
+        <div class="founder-shell">
+          <div class="founder-portrait-wrap reveal from-left">
+            <div class="founder-portrait-glow"></div>
+            <div class="founder-float one"><i class="bi bi-code-slash"></i><div><b>Built by a developer</b><span>Problem → product → impact</span></div></div>
+            <div class="founder-photo-frame"><img class="founder-photo" src="ayushman-acharya.png" alt="Ayushman Acharya, founder and developer of MY CA LOCKER" loading="lazy" /></div>
+            <div class="founder-float two"><i class="bi bi-lightbulb-fill"></i><div><b>Built with purpose</b><span>For the CA community</span></div></div>
+          </div>
+          <div class="founder-copy reveal from-right">
+            <span class="eyebrow"><i class="bi bi-person-badge-fill"></i> The person behind the product</span>
+            <h2 id="founderTitle">The Story Behind <span class="gradient-text">MY CA LOCKER.</span></h2>
+            <p class="lead">MY CA LOCKER started with a simple observation: CA firms manage critical client information every day, yet too much of that work can still depend on scattered files, repeated follow-ups and disconnected workflows.</p>
+            <div class="founder-name"><div class="founder-name-mark">AA</div><div><b>Ayushman Acharya</b><span>Founder &amp; Developer · MY CA LOCKER</span></div></div>
+            <div class="founder-story-grid">
+              <article class="founder-story-card"><i class="bi bi-exclamation-circle-fill"></i><h3>The Problem</h3><p>Documents can live across email, WhatsApp, drives and physical folders. Sharing, tracking and finding the right file can become unnecessarily time-consuming.</p></article>
+              <article class="founder-story-card"><i class="bi bi-stars"></i><h3>Why I Built It</h3><p>I wanted to turn that everyday friction into a focused digital workspace where firms can organize clients, documents, filings and communication in one place.</p></article>
+              <article class="founder-story-card"><i class="bi bi-shield-check"></i><h3>The Approach</h3><p>Keep the experience practical: the right people get the right access, clients get a simple portal, and teams get a clearer workflow.</p></article>
+              <article class="founder-story-card"><i class="bi bi-rocket-takeoff-fill"></i><h3>The Vision</h3><p>Build useful technology for professional teams in India—one real workflow at a time, with simplicity and trust at the center.</p></article>
+            </div>
+            <div class="founder-quote">“Good software should remove friction from important work—not add another layer of it.”<span>— Ayushman Acharya</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section-tight tinted" style="background:#f8fbff"><div class="container"><div class="section-head center reveal"><span class="eyebrow">Social proof</span><h2>Make trust visible — without inventing it.</h2><p>Replace these placeholders with verified client testimonials before launch.</p></div><div class="testimonial-grid"><article class="quote reveal" data-delay="1"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] MY CA LOCKER helped us bring client files and follow-ups into one workflow.”</p><div class="person"><div class="avatar">A</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="2"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] Our staff can finally see ownership and due dates without maintaining a separate tracker.”</p><div class="person"><div class="avatar">S</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article><article class="quote reveal" data-delay="3"><div class="stars">★★★★★</div><p>“[TESTIMONIAL PLACEHOLDER] The client portal is simple enough that our clients actually use it.”</p><div class="person"><div class="avatar">R</div><div><b>Client Name</b><span>Firm / Role</span></div></div></article></div></div></section>
 
     <section class="section" id="pricing">
       <div class="container">
@@ -1254,7 +1326,7 @@
     <section class="section-tight" style="padding-top:0"><div class="container"><div class="final-band reveal scale"><div><h2>Stop chasing documents. Start running a system.</h2><p>See the workflow in a 15-minute walkthrough.</p></div><a href="#demo" class="btn">Book a Demo <i class="bi bi-arrow-right"></i></a></div></div></section>
   </main>
 
-  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="MY CA LOCKER logo" /><span>MY CA LOCKER</span></a><p>MY CA LOCKER is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Talk to Us</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#top">About</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 MY CA LOCKER. All rights reserved.</span><span>Made by<b>Ayushmanbuilds</b></span></div></div></footer>
+  <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top"><img src="icon-192.png" alt="MY CA LOCKER logo" /><span>MY CA LOCKER</span></a><p>MY CA LOCKER is a secure CA database, document locker and practice workflow platform for Chartered Accountant firms and professional service teams.</p></div><div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#portals">Portals</a><a href="#security">Security</a><a href="#pricing">Talk to Us</a></div><div class="footer-col"><h4>Company</h4><a href="#demo">Book a Demo</a><a href="#faq">FAQ</a><a href="#about-founder">About the Founder</a></div><div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a></div></div><div class="copyright"><span>© 2026 MY CA LOCKER. All rights reserved.</span><span>Made by<b>Ayushmanbuilds</b></span></div></div></footer>
 
   <script>
     // Dark mode toggle — persisted in localStorage, falls back to system preference
